@@ -13,10 +13,48 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="BaseSystem">
+      <UniqueIdentifier>{9970b3a4-0a2b-4491-96dc-5d8b4ece7172}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CCharacter">
+      <UniqueIdentifier>{d494f033-88cb-43b7-967b-b995a067a515}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CCharacter\Battle">
+      <UniqueIdentifier>{534ed2bd-4fe2-4a59-9f89-3e0ef0b90cc1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="DiceSystem.cpp">
+      <Filter>BaseSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleSystem.cpp">
+      <Filter>CCharacter\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>CCharacter</Filter>
+    </ClCompile>
+    <ClCompile Include="AbilitySystem.cpp">
+      <Filter>BaseSystem</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DiceSystem.h">
+      <Filter>BaseSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseDefines.h">
+      <Filter>BaseSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleSystem.h">
+      <Filter>CCharacter\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>CCharacter</Filter>
+    </ClInclude>
+    <ClInclude Include="AbilitySystem.h">
+      <Filter>BaseSystem</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
