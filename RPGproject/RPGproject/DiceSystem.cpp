@@ -26,7 +26,7 @@ void DiceSystem::Init()
 
 int DiceSystem::RollDice(DiceType nSide)
 {
-	int nRoll = std::rand() % static_cast<int>(nSide);
+	int nRoll = std::rand() % static_cast<int>(nSide) + 1;
 
 	return nRoll;
 }
