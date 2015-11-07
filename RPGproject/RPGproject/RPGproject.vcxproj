@@ -119,6 +119,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AbilitySystem.cpp" />
+    <ClCompile Include="Battle.cpp" />
     <ClCompile Include="BattleSystem.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="DiceSystem.cpp" />
@@ -127,6 +128,7 @@
   <ItemGroup>
     <ClInclude Include="AbilitySystem.h" />
     <ClInclude Include="BaseDefines.h" />
+    <ClInclude Include="Battle.h" />
     <ClInclude Include="BattleSystem.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="DiceSystem.h" />

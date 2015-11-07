@@ -16,11 +16,11 @@
     <Filter Include="BaseSystem">
       <UniqueIdentifier>{9970b3a4-0a2b-4491-96dc-5d8b4ece7172}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CCharacter">
-      <UniqueIdentifier>{d494f033-88cb-43b7-967b-b995a067a515}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CCharacter\Battle">
+    <Filter Include="Battle">
       <UniqueIdentifier>{534ed2bd-4fe2-4a59-9f89-3e0ef0b90cc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Battle\CCharacter">
+      <UniqueIdentifier>{d494f033-88cb-43b7-967b-b995a067a515}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -31,13 +31,16 @@
       <Filter>BaseSystem</Filter>
     </ClCompile>
     <ClCompile Include="BattleSystem.cpp">
-      <Filter>CCharacter\Battle</Filter>
+      <Filter>Battle</Filter>
     </ClCompile>
     <ClCompile Include="Character.cpp">
-      <Filter>CCharacter</Filter>
+      <Filter>Battle\CCharacter</Filter>
     </ClCompile>
     <ClCompile Include="AbilitySystem.cpp">
       <Filter>BaseSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Battle.cpp">
+      <Filter>Battle</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -48,13 +51,16 @@
       <Filter>BaseSystem</Filter>
     </ClInclude>
     <ClInclude Include="BattleSystem.h">
-      <Filter>CCharacter\Battle</Filter>
+      <Filter>Battle</Filter>
     </ClInclude>
     <ClInclude Include="Character.h">
-      <Filter>CCharacter</Filter>
+      <Filter>Battle\CCharacter</Filter>
     </ClInclude>
     <ClInclude Include="AbilitySystem.h">
       <Filter>BaseSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Battle.h">
+      <Filter>Battle</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

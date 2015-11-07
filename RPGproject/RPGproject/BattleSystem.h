@@ -51,6 +51,8 @@ namespace BattleSystem
 		const int nDamageRoll = DiceSystem::Inst().RollDice(attackDice);
 		const int nDamage = nDamageRoll + Attacker.GetAdjustment(AbilityType::STR);	//데미지에 힘 수정치 붙나???
 
+		Target.ModifyHP( - nDamage);
+
 		return AttackResult{ true, nDamage };
 	}
 }

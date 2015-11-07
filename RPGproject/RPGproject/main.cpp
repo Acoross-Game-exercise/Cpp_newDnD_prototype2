@@ -3,7 +3,6 @@
 
 #include "BaseDefines.h"
 #include "DiceSystem.h"
-
 #include "AbilitySystem.h"
 #include "Character.h"
 #include "BattleSystem.h"
@@ -42,7 +41,6 @@ void TestBattle()
 			BattleSystem::AttackResult ar = BattleSystem::Action_NormalAttack(pc1, enemy1);
 			if (ar.bHit)
 			{
-				enemy1.ModifyHP(-ar.nDamage);
 				wprintf(L"명중했다!\n");
 				wprintf(L"%d의 대미지!\n", ar.nDamage);
 			}
@@ -63,7 +61,6 @@ void TestBattle()
 			BattleSystem::AttackResult ar = BattleSystem::Action_NormalAttack(enemy1, pc1);
 			if (ar.bHit)
 			{
-				pc1.ModifyHP(-ar.nDamage);
 				wprintf(L"명중했다!\n");
 				wprintf(L"%d의 대미지!\n", ar.nDamage);
 			}
@@ -75,19 +72,26 @@ void TestBattle()
 	}
 }
 
+class CGame
+{
+public:
+	void Run()
+	{
+		setlocale(LC_ALL, "");
+		DiceSystem::Inst().Init();
+
+
+	}
+};
+
 int main(int argc, char* args[])
 {
-	setlocale(LC_ALL, "");
-	DiceSystem::Inst().Init();
+	
 
-	TestBattle();
-
-	while (true)
+	while (true)	// main loop
 	{
 		Sleep(100);	// windows 함수
 	}
-
-	TestAttack();
 
 	return 0;
 }

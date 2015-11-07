@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include <algorithm>
 
 #include "BaseDefines.h"
 #include "AbilitySystem.h"
@@ -26,23 +25,11 @@ class CCharacter
 {
 public:
 	NO_COPY(CCharacter);
-	CCharacter(std::wstring Name, int nMaxHP, CAbilitySystem abl)
-		: m_sName(std::move(Name)), m_AbilitySystem(std::move(abl))
-	{
-		m_nMaxHP = max(1, nMaxHP);
-		m_nHP = m_nMaxHP;
-	}
+	CCharacter(std::wstring Name, int nMaxHP, CAbilitySystem abl);
 	~CCharacter() = default;
 
 public:
-	int ModifyHP(int nHPDiff)
-	{
-		m_nHP += nHPDiff;
-		m_nHP = max(0, m_nHP);
-		m_nHP = min(m_nMaxHP, m_nHP);
-
-		return m_nHP;
-	}
+	int ModifyHP(int nHPDiff);
 
 public:
 	inline bool IsAlive() const
